@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Clove — Landing (work-in-progress)</title>
+
+  <!-- Link to your stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="site-header" class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- LOGO -->
+      <a href="/" class="logo" aria-label="Clove Dental homepage" id="site-logo">
+        <span class="logo-mark">clove</span>
+        <span class="logo-smile" aria-hidden="true">:)</span>
+        <span class="logo-text">Dental</span>
+      </a>
+
+      <!-- NAV - primary -->
+      <nav id="main-nav" class="main-nav" aria-label="Primary" role="navigation">
+        <ul class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="#hero">Home</a></li>
+
+          <!-- dropdown example -->
+          <li class="has-sub" role="none">
+            <button class="sub-toggle" aria-haspopup="true" aria-expanded="false">Services ▾</button>
+            <ul class="sub-menu" role="menu" aria-label="Services submenu">
+              <li role="none"><a role="menuitem" href="#Root">Root Canal</a></li>
+              <li role="none"><a role="menuitem" href="#Root">Implants</a></li>
+              <li role="none"><a role="menuitem" href="#Root">Cosmetic</a></li>
+            </ul>
+          </li>
+
+          <li role="none"><a role="menuitem" href="#testimonials">Patients</a></li>
+          <li role="none"><a role="menuitem" href="#why">Why Choose</a></li>
+          <li role="none"><a role="menuitem" href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- ACTIONS: phone + CTA + mobile toggle -->
+      <div class="header-actions" role="group" aria-label="Header actions">
+        <!-- Phone chip -->
+        <a class="phone-chip" href="tel:9856589510" aria-label="Call clinic">
+          <span class="phone-ico" aria-hidden="true">📞</span>
+          <span class="phone-text">985-6589-510</span>
+        </a>
+
+        <!-- Theme toggle (light/dark) -->
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark mode">
+          <span class="theme-ico" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- Book CTA -->
+        <a class="cta cta-book" href="#booking" id="book-cta" aria-label="Book appointment">
+          <span class="cta-text">Book</span>
+        </a>
+
+        <!-- mobile menu toggle -->
+        <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO (main banner + quick form) ============ -->
+
+  <section id="hero" class="hero-section" aria-label="Hero carousel" role="region">
+    <div class="container hero-inner">
+      <div class="hero-carousel" aria-roledescription="carousel">
+        <!-- Focusable viewport (keyboard access) -->
+        <div class="hc-viewport" tabindex="0" aria-live="polite" aria-label="Image carousel viewport">
+          <div class="hc-track">
+            <!-- Leading clone = last image -->
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-5.webp" loading="lazy" alt="hero-5"></div>
+            </div>
+
+            <!-- Real slides -->
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-1.webp" loading="lazy" alt="hero-1"></div>
+            </div>
+
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-2.webp" loading="lazy" alt="hero-2"></div>
+            </div>
+
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-3.webp" loading="lazy" alt="hero-3"></div>
+            </div>
+
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-4.webp" loading="lazy" alt="hero-4"></div>
+            </div>
+
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-5.webp" loading="lazy" alt="hero-5"></div>
+            </div>
+
+            <!-- Trailing clone = first image -->
+            <div class="hc-slide">
+              <div class="hc-card"><img src="images/hero-1.webp" loading="lazy" alt="hero-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES STRIP (scrolling) ============ -->
+  <section id="features-strip" class="features-strip" aria-label="Key features">
+    <div class="features-track" role="list" aria-hidden="false">
+      <!-- repeat items; replace icon/text as required -->
+      <div class="feature-item" role="listitem" tabindex="0" title="Same-day appointments">
+        <span class="feat-ico" aria-hidden="true">🕒</span>
+        <span class="feat-text">Same-day appointments</span>
+      </div>
+
+      <div class="feature-item" role="listitem" tabindex="0" title="Advanced implants">
+        <span class="feat-ico" aria-hidden="true">🦷</span>
+        <span class="feat-text">Advanced implants</span>
+      </div>
+
+      <div class="feature-item" role="listitem" tabindex="0" title="Pain-free treatment">
+        <span class="feat-ico" aria-hidden="true">✨</span>
+        <span class="feat-text">Pain-free treatment</span>
+      </div>
+
+      <div class="feature-item" role="listitem" tabindex="0" title="Insurance accepted">
+        <span class="feat-ico" aria-hidden="true">💳</span>
+        <span class="feat-text">Insurance accepted</span>
+      </div>
+
+      <div class="feature-item" role="listitem" tabindex="0" title="International standards">
+        <span class="feat-ico" aria-hidden="true">🏅</span>
+        <span class="feat-text">International standards</span>
+      </div>
+
+      <!-- add more items as needed -->
+    </div>
+  </section>
+
+  <!-- ====== BOOKING FORM (Glassy) ====== -->
+  <div id="booking" class="booking-card">
+    <header class="booking-header">
+      <h3 class="booking-title">Book an Appointment</h3>
+      <p class="booking-sub">Quick &amp; easy — choose service, date &amp; time</p>
+    </header>
+
+    <form class="booking-form" action="#" method="post" novalidate>
+      <div class="bf-row">
+        <div class="bf-field">
+          <label class="bf-label" for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+          <div class="bf-err">Please enter name</div>
+        </div>
+
+        <div class="bf-field">
+          <label class="bf-label" for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required>
+          <div class="bf-err">Please enter phone</div>
+        </div>
+      </div>
+
+      <div class="bf-row">
+        <div class="bf-field full">
+          <label class="bf-label">Service</label>
+
+          <!-- service cards (radio inputs hidden, clickable labels styled as cards) -->
+          <div class="service-grid" role="list">
+            <label class="service-card" role="listitem">
+              <input id="Root" type="radio" name="service" value="root-canal" checked>
+              <div class="svc-title">Root Canal</div>
+              <div class="svc-sub">Precision treatment</div>
+            </label>
+
+            <label class="service-card" role="listitem">
+              <input id="Implant" type="radio" name="service" value="implant">
+              <div class="svc-title">Implant</div>
+              <div class="svc-sub">Long-term solution</div>
+            </label>
+
+            <label class="service-card" role="listitem">
+              <input id="Cosmotic" type="radio" name="service" value="cosmetic">
+              <div class="svc-title">Cosmetic</div>
+              <div class="svc-sub">Smile design</div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="bf-row">
+        <div class="bf-field">
+          <label class="bf-label" for="date">Preferred date</label>
+          <div class="date-wrap">
+            <input id="date" name="date" type="date" required>
+            <span class="date-ico" aria-hidden="true"></span>
+          </div>
+          <div class="bf-err">Choose a date</div>
+        </div>
+
+        <div class="bf-field">
+          <label class="bf-label" for="time">Time</label>
+          <select id="time" name="time">
+            <option>09:00 AM</option>
+            <option>11:00 AM</option>
+            <option>02:00 PM</option>
+            <option>04:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="bf-row">
+        <div class="bf-field full">
+          <label class="bf-label" for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="2" placeholder="Any preference or concern"></textarea>
+        </div>
+      </div>
+
+      <div class="bf-actions">
+        <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        <button type="reset" class="btn btn-ghost">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ============ SERVICES / TREATMENTS ============ -->
+  <section id="services" class="services section" aria-label="Services and treatments">
+    <div class="container">
+      <header class="section-head">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Specialized treatments delivered with care</p>
+      </header>
+
+      <div class="services-grid" role="list">
+        <!-- repeat service-item blocks for each service -->
+        <article class="service-item" role="listitem" tabindex="0" data-service="root-canal">
+          <!-- Image variant (gift-packing card style). You may set src directly or use data-img and let JS fallback) -->
+          <div class="svc-media">
+            <img class="svc-img" src="images/root-canal-card.png" alt="Root Canal service card image" />
+          </div>
+          <div class="svc-body">
+            <h3 class="svc-title">Root Canal</h3>
+            <p class="svc-short">Gentle care to save your tooth and stop pain.</p>
+            <button class="svc-more" aria-expanded="false" aria-controls="svc-root-canal">Learn more</button>
+          </div>
+        </article>
+
+        <article class="service-item" role="listitem" tabindex="0" data-service="root-canal">
+          <div class="svc-media">
+            <img class="svc-img" src="images/root-import-card.png" alt="Root Canal service card image" />
+          </div>
+
+          <div class="svc-body">
+            <h3 class="svc-title">Dental Implants</h3>
+            <p class="svc-short">Permanent, natural-looking replacements.</p>
+            <button class="svc-more" aria-expanded="false" aria-controls="svc-root-canal">Learn more</button>
+          </div>
+        </article>
+
+        <article class="service-item" role="listitem" tabindex="0" data-service="root-canal">
+          <div class="svc-media">
+            <img class="svc-img" src="images/root-dentistry-card.png" alt="Root Canal service card image" />
+          </div>
+
+          <div class="svc-body">
+            <h3 class="svc-title">Cosmetic Dentistry</h3>
+            <p class="svc-short">Veneers, whitening and smile makeovers.</p>
+            <button class="svc-more" aria-expanded="false" aria-controls="svc-root-canal">Learn more</button>
+          </div>
+        </article>
+
+        <article class="service-item" role="listitem" tabindex="0" data-service="root-canal">
+          <div class="svc-media">
+            <img class="svc-img" src="images/root-or-card.png" alt="Root Canal service card image" />
+          </div>
+
+          <div class="svc-body">
+            <h3 class="svc-title">Orthodontics</h3>
+            <p class="svc-short">Braces &amp; aligners for every age.</p>
+            <button class="svc-more" aria-expanded="false" aria-controls="svc-root-canal">Learn more</button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Modal details (single accessible modal reused for all items) -->
+    <div id="svc-modal" class="svc-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="svc-modal-title">
+      <div class="svc-modal-inner" role="document">
+        <button class="svc-modal-close" aria-label="Close">✕</button>
+
+        <header>
+          <h3 id="svc-modal-title" class="svc-modal-title"></h3>
+          <p id="svc-modal-sub" class="svc-modal-sub"></p>
+        </header>
+
+        <div id="svc-modal-body" class="svc-modal-body"></div>
+
+        <footer class="svc-modal-actions">
+          <a href="#booking" class="cta cta-book svc-modal-cta">Book Appointment</a>
+          <button class="svc-modal-close-btn" aria-label="Close modal"></button>
+        </footer>
+      </div>
+
+      <div class="svc-modal-backdrop" tabindex="-1" data-close="true"></div>
+    </div>
+  </section>
+
+ <!-- ============ Testimonials ============ -->
+<section id="testimonials" class="testimonials" aria-label="Video testimonials">
+  <div class="container">
+    <header class="section-head">
+      <h2 class="section-title">Patient Video Testimonials</h2>
+      <p class="section-sub">Short, candid videos</p>
+    </header>
+
+    <div class="shorts-wrap">
+      <button class="shorts-nav shorts-prev" aria-label="Scroll left">‹</button>
+
+      <div class="shorts-track" role="list" tabindex="0" aria-label="Video shorts list">
+        <!-- Example card: data-video accepts either a YouTube ID or a full embed url -->
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="NU9lmavP7MA" aria-label="Video testimonial by Arjun">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/NU9lmavP7MA/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay">
+              <div class="play-ico">▶</div>
+            </div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Arjun">
+            <div class="short-txt">
+              <div class="short-name">Hansika Rajput.</div>
+              <div class="short-role">Root Canal — Short</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="YbksDB_10oY" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/YbksDB_10oY/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Arjun K.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="8spQT48tsgI" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/8spQT48tsgI/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Sai Threveni.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="bCoMJ_teDcs" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/bCoMJ_teDcs/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Sejan.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="nUrpHXpNhK8" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/nUrpHXpNhK8/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Husina T.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="AcuCmeKYiJE" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/AcuCmeKYiJE/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Rahul.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+        <article class="short-card" role="listitem" tabindex="0"
+                 data-video="c8gzF8EK2KE" aria-label="Video testimonial by Priya">
+          <div class="short-thumb" aria-hidden="true">
+            <img class="short-thumb-img" src="https://img.youtube.com/vi/c8gzF8EK2KE/hqdefault.jpg" alt="Video thumbnail">
+            <div class="thumb-overlay"><div class="play-ico">▶</div></div>
+          </div>
+          <div class="short-meta">
+            <img class="short-avatar" src="images/logo.svg" alt="Priya">
+            <div class="short-txt">
+              <div class="short-name">Priya K.</div>
+              <div class="short-role">Implant — Short</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Duplicate or add more short-card blocks as needed -->
+      </div>
+
+      <button class="shorts-nav shorts-next" aria-label="Scroll right">›</button>
+    </div>
+  </div>
+
+  <!-- Modal (single reusable) -->
+  <div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Video player dialog">
+    <div class="video-modal-inner" role="document">
+      <div class="video-controls">
+        <button class="video-close" aria-label="Close video">✕</button>
+        <button class="video-sound" aria-pressed="false" aria-label="Toggle sound">🔈</button>
+      </div>
+      <div class="video-frame" aria-live="polite"></div>
+    </div>
+    <div class="video-backdrop" data-close="true" tabindex="-1"></div>
+  </div>
+</section>
+
+
+  <!-- ============ WHY CHOOSE / FEATURES (split) ============ -->
+<section id="why" class="why-choose section" aria-labelledby="why-title">
+  <div class="container why-inner">
+    <header class="why-head">
+      <h2 id="why-title" class="section-title">Why Choose Clove Dental?</h2>
+      <p class="section-sub">Comfort-first dentistry, modern tech, and a care team you can trust — all under one roof.</p>
+    </header>
+
+    <div class="why-grid">
+      <!-- left: feature cards -->
+      <div class="why-features" role="list" aria-label="Key reasons to choose us">
+        <article class="why-card" role="listitem" data-reveal>
+          <div class="why-ico" aria-hidden="true">🏥</div>
+          <div class="why-body">
+            <h3 class="why-card-title">State-of-the-art clinics</h3>
+            <p class="why-card-sub">CBCT, digital scanners, and modern sterilization — for safer, precise care.</p>
+          </div>
+        </article>
+
+        <article class="why-card" role="listitem" data-reveal>
+          <div class="why-ico" aria-hidden="true">🩺</div>
+          <div class="why-body">
+            <h3 class="why-card-title">Experienced specialists</h3>
+            <p class="why-card-sub">Certified endodontists, implantologists and prosthodontists with global training.</p>
+          </div>
+        </article>
+
+        <article class="why-card" role="listitem" data-reveal>
+          <div class="why-ico" aria-hidden="true">⏱️</div>
+          <div class="why-body">
+            <h3 class="why-card-title">Quick appointments</h3>
+            <p class="why-card-sub">Same-day consultations and efficient treatment planning to minimise your visits.</p>
+          </div>
+        </article>
+
+        <article class="why-card" role="listitem" data-reveal>
+          <div class="why-ico" aria-hidden="true">💚</div>
+          <div class="why-body">
+            <h3 class="why-card-title">Patient-first care</h3>
+            <p class="why-card-sub">Pain-minimized treatments, clear communication and follow-ups for peace of mind.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- right: visual + quick stats + CTA -->
+      <aside class="why-aside" aria-hidden="false">
+        <div class="why-visual">
+          <!-- optional image or illustration (keeps aspect & rounded glass) -->
+          <img src="images/why-choose-us.webp" alt="Clinic interior" class="why-img" />
+        </div>
+
+        <div class="why-mini">
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <div class="mini-value" data-target="1300">0</div>
+              <div class="mini-label">Certified Dentists</div>
+            </div>
+            <div class="mini-stat">
+              <div class="mini-value" data-target="250">0</div>
+              <div class="mini-label">Clinics</div>
+            </div>
+          </div>
+
+          <div class="why-cta">
+            <a href="#booking" class="btn btn-primary">Book a Visit</a>
+            <a href="#services" class="btn btn-ghost">View Services</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Free Consultation (place under #why or appropriate section) ===== -->
+<section id="free-consult" class="free-consult" aria-label="Free consultation">
+  <div class="container free-consult-inner">
+    <div class="fc-card">
+      <div class="fc-left">
+        <h3 class="fc-title">Free Consultation</h3>
+        <p class="fc-desc">Get a free 10-minute consultation. Leave your name and phone — we’ll call to schedule.</p>
+        
+      </div>
+
+      <form id="free-consult-form" class="fc-form" action="#" method="post" novalidate>
+        <div class="fc-row">
+          <label class="fc-field">
+            <span class="fc-label">Name</span>
+            <input id="fc-name" name="name" type="text" inputmode="text" autocomplete="name" placeholder="Your full name" required>
+            <div class="fc-err" aria-live="polite"></div>
+          </label>
+
+          <label class="fc-field">
+            <span class="fc-label">Phone</span>
+            <input id="fc-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required>
+            <div class="fc-err" aria-live="polite"></div>
+          </label>
+        </div>
+
+        <div class="fc-row fc-captcha-row" aria-hidden="false">
+          <div class="fc-captcha" id="fc-captcha" aria-live="polite"></div>
+          <label class="fc-field small">
+            <span class="fc-label">Enter result</span>
+            <input id="fc-captcha-input" name="captcha" type="number" inputmode="numeric" placeholder="e.g. 12" required>
+            <div class="fc-err" aria-live="polite"></div>
+          </label>
+        </div>
+
+        <div class="fc-actions">
+          <button type="submit" class="btn btn-primary fc-submit">Request Call</button>
+          <button type="button" class="btn btn-ghost fc-reset" id="fc-reset">Clear</button>
+        </div>
+
+        <div id="fc-feedback" class="fc-feedback" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ============ STATS / TRUST STRIP ============ -->
+  <section id="stats" class="stats-section" aria-label="Statistics and trust">
+    <div class="container stats-inner">
+      <!-- Stats grid -->
+      <div class="stats-grid" role="list" aria-label="Key statistics">
+        <div class="stat-card" role="listitem">
+          <div class="stat-value" data-target="1300">0</div>
+          <div class="stat-label">Certified Dentists</div>
+        </div>
+
+        <div class="stat-card" role="listitem">
+          <div class="stat-value" data-target="300000">0</div>
+          <div class="stat-label">Happy Patients</div>
+        </div>
+
+        <div class="stat-card" role="listitem">
+          <div class="stat-value" data-target="250">0</div>
+          <div class="stat-label">Clinics Nationwide</div>
+        </div>
+
+        <div class="stat-card" role="listitem">
+          <div class="stat-value" data-target="12">0</div>
+          <div class="stat-label">Years of Service</div>
+        </div>
+      </div>
+
+      <!-- Trust strip + logo scroller -->
+      <div class="trust-wrap">
+        <div class="trust-left">
+          <h3 class="trust-title">Trusted by thousands</h3>
+          <p class="trust-sub">Accreditations, partnerships and global trips completed</p>
+        </div>
+
+        <div class="trust-logos" aria-hidden="false" role="region" aria-label="Partner logos">
+          <div class="logos-track">
+            <!-- Repeat logo items; replace src with your logo paths -->
+            <div class="logo-item"><img src="images/trust-1.png" alt="Partner 1"></div>
+            <div class="logo-item"><img src="images/trust-2.png" alt="Partner 2"></div>
+            <div class="logo-item"><img src="images/trust-3.png" alt="Partner 3"></div>
+            <div class="logo-item"><img src="images/trust-4.png" alt="Partner 4"></div>
+            <div class="logo-item"><img src="images/trust-5.png" alt="Partner 5"></div>
+
+            <!-- duplicated to create infinite scroll effect -->
+            <div class="logo-item"><img src="images/trust-1.png" alt="Partner 1"></div>
+            <div class="logo-item"><img src="images/trust-2.png" alt="Partner 2"></div>
+            <div class="logo-item"><img src="images/trust-3.png" alt="Partner 3"></div>
+            <div class="logo-item"><img src="images/trust-4.png" alt="Partner 4"></div>
+            <div class="logo-item"><img src="images/trust-5.png" alt="Partner 5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ (accordion) ============ -->
+  <section id="faq" class="faq">
+    <!-- ===== FAQ (Accordion + search) ===== -->
+<div class="faq-inner container">
+
+  <!-- header -->
+  <header class="faq-head">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers about appointments, payments and treatment.</p>
+  </header>
+
+  <!-- optional search / filter -->
+  <div class="faq-search-row">
+    <label class="faq-search">
+      <input id="faq-search" type="search" placeholder="Search FAQs (e.g. 'payment', 'implant')" aria-label="Search FAQs">
+    </label>
+  </div>
+
+  <!-- accordion list -->
+  <div class="faq-list" role="list" id="faq-list">
+
+    <!-- each item: note the id used for deep-linking -->
+    <div class="faq-item" id="faq-1" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+        <span class="faq-q-text">How do I book an appointment?</span>
+        <span class="faq-q-chevron" aria-hidden="true">▸</span>
+      </button>
+      <div id="faq-panel-1" class="faq-a" role="region" aria-labelledby="faq-btn-1" hidden>
+        <p>Use the Book button at the top, or fill the Quick Booking form. We'll call to confirm. For urgent care call us directly at <a href="tel:9856589510">985-6589-510</a>.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq-2" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+        <span class="faq-q-text">What payment methods do you accept?</span>
+        <span class="faq-q-chevron" aria-hidden="true">▸</span>
+      </button>
+      <div id="faq-panel-2" class="faq-a" role="region" aria-labelledby="faq-btn-2" hidden>
+        <p>We accept cash, major credit/debit cards and most insurance plans. For insurance claims, bring your policy details and ID.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq-3" role="listitem">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+        <span class="faq-q-text">Do you provide emergency dental care?</span>
+        <span class="faq-q-chevron" aria-hidden="true">▸</span>
+      </button>
+      <div id="faq-panel-3" class="faq-a" role="region" aria-labelledby="faq-btn-3" hidden>
+        <p>Yes — we offer same-day emergency slots where possible. Call the clinic for urgent cases; follow instructions on arrival.</p>
+      </div>
+    </div>
+
+    <!-- add more items following the pattern above -->
+  </div>
+</div>
+
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="site-footer" class="site-footer">
+    <!-- ============ FOOTER ============ -->
+<footer id="site-footer" class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-wave" aria-hidden="true">
+    <!-- decorative wave SVG (keeps color via currentColor) -->
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="wave-svg" role="presentation">
+      <path d="M0,80 C150,10 300,140 600,80 C900,20 1050,120 1200,80 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <div class="footer-inner container">
+    <div class="footer-grid">
+      <!-- brand & short -->
+      <div class="footer-brand">
+        <a href="/" class="logo footer-logo" aria-label="Clove Dental homepage">
+          <span class="logo-mark">clove</span>
+          <span class="logo-smile">:)</span>
+          <span class="logo-text">Dental</span>
+        </a>
+        <p class="footer-desc">Gentle care, precise treatment. Book online or call us for same-day appointments and friendly guidance.</p>
+
+        <nav class="footer-social" aria-label="Follow us on social media">
+          <a href="#" class="social-link" aria-label="Follow on Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Follow on YouTube">▶️</a>
+          <a href="#" class="social-link" aria-label="Follow on Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Follow on LinkedIn">in</a>
+        </nav>
+      </div>
+
+      <!-- contact -->
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <address>
+          <div>📍 12 Health Street, Hyderabad</div>
+          <div class="phn">📞 <a  href="tel:9856589510">985-6589-510</a></div>
+          <div class="mail">📥 <a href="mailto:contact@clove.example">contact@clove.example</a></div>
+        </address>
+        <div class="footer-cta">
+          <a class="cta cta-book" href="#booking" aria-label="Book appointment">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">© <span id="footer-year"></span> Clove Dental — All rights reserved</div>
+      <div class="policy-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="#contact">Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- floating back-to-top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">⬆</button>
+</footer>
+
+  </footer>
+
+  <!-- Link to your JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
