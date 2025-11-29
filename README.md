@@ -56,33 +56,35 @@ This repository contains a static landing page for a dental clinic called **Clov
 
 ---
 
-## Project structure
+## 📁 Project Folder Structure
+
+```
 clove_landing/
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── js/
-│ └── script.js
+│   └── script.js
 ├── images/
-│ ├── hero-1.webp
-│ ├── hero-2.webp
-│ ├── hero-3.webp
-│ ├── hero-4.webp
-│ ├── hero-5.webp
-│ ├── logo.svg
-│ ├── root-canal-card.png
-│ ├── root-dentistry-card.png
-│ ├── root-import-card.png
-│ ├── root-or-card.png
-│ ├── trust-1.png
-│ ├── trust-2.png
-│ ├── trust-3.png
-│ ├── trust-4.png
-│ ├── trust-5.png
-│ └── why-choose-us.webp
+│   ├── hero-1.webp
+│   ├── hero-2.webp
+│   ├── hero-3.webp
+│   ├── hero-4.webp
+│   ├── hero-5.webp
+│   ├── logo.svg
+│   ├── root-canal-card.png
+│   ├── root-dentistry-card.png
+│   ├── root-import-card.png
+│   ├── root-or-card.png
+│   ├── trust-1.png
+│   ├── trust-2.png
+│   ├── trust-3.png
+│   ├── trust-4.png
+│   ├── trust-5.png
+│   └── why-choose-us.webp
 └── README.md
+```
 
----
 
 ## Screenshots
 (Images are stored in `/images/` - use them in this README or on the repo page)
